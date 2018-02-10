@@ -6,8 +6,8 @@ body {
 	margin:0;
 	padding-bottom:5%;
 	line-height: 1.5;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
+	font-family:Arial, sans-serif;
+	font-size:16px;
 }
 header {
 	background-color:white;
@@ -25,7 +25,7 @@ hr {
 }
 h2 {
 	color: #4fa9a4;
-	font-size:24px;
+	font-size:100%;
 	font-weight:bold;
 	font-family: "Georgia", Times New Roman, Times, serif;
 }
@@ -41,8 +41,6 @@ footer {
 }
 p {
 	color:#777777;
-	font-size:12px;
-	font-weight:bold;
 	margin-bottom:15px;
 }
 a {
@@ -80,6 +78,7 @@ textarea {
 	font-family: "Georgia",Times New Roman,Times,serif;
 	color:white;
 	width:25%;
+	display:inline-block;
 }
 #connect-with-me,
 #contact-me,
@@ -91,7 +90,7 @@ textarea {
 #contact-me,
 #my-portfolio,
 #about-me {
-	width:650px;
+	width:67.70833333333334%;
 	border: 1px solid #cccccc;
 	background-color: white;
 	height:100%;
@@ -101,7 +100,7 @@ textarea {
 	padding-right:25px;
 }
 #connect-with-me {
-	width:270px;
+	width:28.125%;
 	border: 1px solid #cccccc;
 	background-color: white;
 	padding-top:25px;
@@ -110,6 +109,9 @@ textarea {
 }
 #navMenu {
 	float:right;
+	position:absolute;
+	top:0;
+	right:0;
 }
 #placeholder-img {
 	margin-right:10px;
@@ -142,6 +144,14 @@ textarea {
 	color:#4fa9a4;
 }
 
+
+@media screen and (max-width: 640px) {
+	/*I couldn't get this breakpoint to work. The header didn't span across the full length of the screen like the others did. I'm still looking for a solution*/
+	.container {
+		width: 500px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.container {
 		width: 600px;
@@ -154,7 +164,7 @@ textarea {
 
 @media screen and (max-width: 980px) {
 	.container {
-		width: 800px;
+		width: 750px;
 	}
 	body {
 		overflow-x:hidden;
@@ -167,26 +177,7 @@ textarea {
 	}
 	.placeholder-img {
 		float: inherit;
-	}
-}
-
-@media screen and (max-width: 640px) {
-	.container {
-		width: 500px;
-	}
-	#contact-me,
-	#my-portfolio,
-	#about-me,
-	#connect-with-me {
-		width:100%;
-	}
-	#connect-with-me {
-		float:right;
-	}
-	header {
-		position:static;
-	}
-	body {
-		overflow-x:hidden;
+		display:block;
+		margin:10px;
 	}
 }
